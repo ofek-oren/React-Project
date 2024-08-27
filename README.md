@@ -56,7 +56,7 @@ The application utilizes the following API endpoints:
 - **Posts API:** `https://jsonplaceholder.typicode.com/posts`
 
 
-### to Generalizing the API URLs
+### Generalizing the API URLs
 
 If you want to connect the app to your own API, replace these URLs in the `MaincComp.js` (or other relevant files) with your own:
 
