@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getAll, getById, addItem, updateItem, deleteItem } from './utils';
-
-const TodosUrl = 'https://jsonplaceholder.typicode.com/todos';
+import {TodosUrl} from './MaincComp';
+import MaincComp from './MainComp';
 
 const frameStyle = {
   border: '3px solid',

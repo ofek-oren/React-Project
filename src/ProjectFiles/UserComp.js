@@ -3,13 +3,9 @@ import { getAll, getById, addItem, updateItem, deleteItem } from './utils';
 import OtherDataComp from './OtherDataComp';
 import axios from 'axios';
 import TodosComp from './TodosComp';
+import {UsersUrl,TodosUrl} from './MainComp';
 
 
-
-
-const UsersUrl ='https://jsonplaceholder.typicode.com/users';
-const PostUrl ='https://jsonplaceholder.typicode.com/posts';
-const TodosUrl = 'https://jsonplaceholder.typicode.com/todos';
 
 const frameStyle = {
     border: '3px solid',
