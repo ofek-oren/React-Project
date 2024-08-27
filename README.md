@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# React User Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React-based application that manages user information and todo list, utilizing an API to fetch and manipulate data. The main features include:
 
-In the project directory, you can run:
+- **Search Functionality:** Users can search by name or email.
+- **User Management:** Display user details and allow for updating and deleting user data.
+- **Todo Management:** View and manage todo list associated with each user.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Search Users:**
+   - Real-time search functionality to filter users by name or email.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **User Details:**
+   - Displays detailed information about each user.
+   - Update or delete user details.
 
-### `npm test`
+3. **Todos:**
+   - View todos associated with a user.
+   - Add new todos.
+   - Mark todos as completed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+- **`MaincComp.js`**: The main component that handles fetching data and managing the list of users.
+- **`UserComp.js`**: A component responsible for displaying and managing individual user data.
+- **`OtherDataComp.js`**: A child component used to display additional user-related data.
+- **`TodosComp.js` & `ChildTodosComp.js`**: Components for handling user-specific tasks (todos).
+- **`utils.js`**: Contains reusable functions for API requests.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ofekoOren/React-Project.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Start the development server:**
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API Endpoints
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application utilizes the following API endpoints:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Users API:** `https://jsonplaceholder.typicode.com/users`
+- **Todos API:** `https://jsonplaceholder.typicode.com/todos`
+- **Posts API:** `https://jsonplaceholder.typicode.com/posts`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### to Generalizing the API URLs
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you want to connect the app to your own API, replace these URLs in the `MaincComp.js` (or other relevant files) with your own:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```javascript
+const UsersUrl = 'https://your-api.com/users';
+const PostUrl = 'https://your-api.com/posts';
+const TodosUrl = 'https://your-api.com/todos';
+```
 
-### Code Splitting
+### Adjusting Data Fields
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Make sure the data fields (like `id`, `name`, `email`, `address`, etc.) match your API's response. If your API returns different field names or structures, you'll need to update the components accordingly.
 
-### Analyzing the Bundle Size
+## How to Use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Search for Users:** Use the search bar to find users by name or email.
+2. **View User Details:** Click on a user’s ID to view detailed information.
+3. **Manage Todos:** Use the Add button to add new todos, or view existing todos and mark them as complete.
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to fork the repository, make changes, and submit pull requests. Contributions are welcome!
