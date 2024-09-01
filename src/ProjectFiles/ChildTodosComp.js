@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getAll, getById, addItem, updateItem, deleteItem } from './utils';
-import {TodosUrl} from './MaincComp';
-import MaincComp from './MainComp';
+import {TodosUrl} from './MainComp';
+import MainComp from './MainComp';
 
 const frameStyle = {
   border: '3px solid',

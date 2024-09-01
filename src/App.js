@@ -1,9 +1,9 @@
-import MaincComp from './ProjectFiles/MainComp';
+import MainComp from './ProjectFiles/MainComp';
 
 function App() {
   return (
     <div className="App">
-      <MaincComp/>
+      <MainComp/>
     </div>
   );
 }

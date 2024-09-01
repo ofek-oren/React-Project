@@ -42,15 +42,24 @@ function UserComp(props) {
     setShowTodos(!showTodos); 
   };
 
+  const addNewTodo = (newTodo) => {
+    setTodos([...Todos, newTodo]);
+    setShowTodos(false); // delete this if you want to be able to add more than 1 todos in a row
+  };
+
+
+
+
     return (
       <div className="App" style={frameStyle}>
         <label onClick={handleLabelClick} style={{ cursor: 'pointer' }}>ID</label> : {props.id} <br />
 
         {showTodos && (
         <div >
-          <TodosComp props={Todos} />
+          <TodosComp props={{Todos,addNewTodo}} />
         </div>
       )}
+
 
         Name: <input value={Name} onChange={(e) => setName(e.target.value)} /><br/>
         Email: <input value={Email} onChange={(e) => setEmail(e.target.value)} /><br/>

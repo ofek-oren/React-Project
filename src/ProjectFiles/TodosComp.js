@@ -16,22 +16,22 @@ const frameStyle = {
 };
 
 function TodosComp(props) {
-  const [Todos, setTodos] = useState(props.props);
+  const [Todos, setTodos] = useState(props.props.Todos);
   const [showTodos, setShowTodos] = useState(true);
 
 
   const handaleAddTodo =()=>{
     setShowTodos(false);
   }
-  const addNewTodo = (newTodo) => {
-    setTodos([...Todos, newTodo]);
-    setShowTodos(false);
-  };
 
+  const cancelAdd = ()=>{
+    setShowTodos(!showTodos);
+  }
+  
   
   return (
     <div className="App" style={frameStyle}>
-        Todos- User={props.props[0].userId}
+        Todos- User={props.props.Todos[0].userId}
         {showTodos && (
         <button onClick={handaleAddTodo}>Add</button>
       )}
@@ -41,7 +41,7 @@ function TodosComp(props) {
       ))}
       
       {!showTodos && (
-        <AddTodoComp props={{...props,addNewTodo}}/>
+        <AddTodoComp props={{ props, cancelAdd }} />
       )}
       
 

@@ -19,14 +19,16 @@ function AddTodoComp(props) {
     console.log(props)
   },[])
   const handleAddNewTodo =()=>{
-    props.props.addNewTodo({title: NewTodos, completed: false})
-
+    props.props.props.props.addNewTodo({userId: props.props.props.props.Todos[0].userId ,id:props.props.props.props.Todos.length+1, title: NewTodos, completed: false,  })
+    setNewTodos(""); 
+    alert("New todo has been added");
   }
+
   return (
     <div className="App" style={frameStyle}>
-        New Todo - User{props.props.props[0].userId}<br/>
-        Title: <input type='text' onChange={(e)=>setNewTodos(e.target.value)}></input><br/>
-        <button>Cancel</button>
+        New Todo - User{props.props.props.props.Todos[0].userId}<br/>
+        Title: <input type='text' value={NewTodos} onChange={(e)=>setNewTodos(e.target.value)}></input><br/>
+        <button onClick={props.props.cancelAdd}>Cancel</button> 
         <button onClick={(e)=>{handleAddNewTodo()}}>Add</button>
 
     </div>
